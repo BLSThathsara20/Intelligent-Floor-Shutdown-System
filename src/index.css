@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 15 23 42;
+    --color-accent-teal: 13 148 136;
+    --color-accent-amber: 217 119 6;
+    --color-accent-violet: 124 58 237;
+    --color-surface: 250 249 247;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[#faf9f7] text-slate-800 antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Focus visible for accessibility (WCAG) */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-teal-500;
+  }
+
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .card-base {
+    @apply rounded-2xl border border-slate-200/80 bg-white shadow-[0_1px_3px_rgba(0,0,0,0.04),0_6px_16px_-4px_rgba(0,0,0,0.06)];
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .live-value {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .live-value-updated {
+    animation: valueFlash 0.4s ease-out;
+  }
+}
+
+@keyframes valueFlash {
+  0% { opacity: 0.5; transform: scale(1.02); }
+  100% { opacity: 1; transform: scale(1); }
+}
