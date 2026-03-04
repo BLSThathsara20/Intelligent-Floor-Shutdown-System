@@ -61,8 +61,11 @@ The dashboard is deployed at:
 
 1. Go to your repo: https://github.com/BLSThathsara20/Intelligent-Floor-Shutdown-System
 2. Click **Settings** → **Pages** (left sidebar)
-3. Under **Build and deployment** → **Source**, select **GitHub Actions**
-4. Push to `main` — the workflow will build and deploy automatically
+3. Under **Build and deployment** → **Source**, select **Deploy from a branch**
+4. **Branch:** select `gh-pages` and `/ (root)` folder
+5. Click **Save**
+6. Push to `main` — the workflow will build and deploy to `gh-pages` automatically
+7. Wait 1–2 minutes, then visit the URL above
 
 ## Project Structure
 
