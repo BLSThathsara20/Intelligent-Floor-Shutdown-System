@@ -52,6 +52,18 @@ npm run build
 npm run preview
 ```
 
+## GitHub Pages (Live Demo)
+
+The dashboard is deployed at:  
+**https://blsthathsara20.github.io/Intelligent-Floor-Shutdown-System/**
+
+### Enable GitHub Pages (one-time setup)
+
+1. Go to your repo: https://github.com/BLSThathsara20/Intelligent-Floor-Shutdown-System
+2. Click **Settings** → **Pages** (left sidebar)
+3. Under **Build and deployment** → **Source**, select **GitHub Actions**
+4. Push to `main` — the workflow will build and deploy automatically
+
 ## Project Structure
 
 ```
